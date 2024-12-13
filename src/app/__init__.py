@@ -38,33 +38,6 @@ def initialize_extensions(app: Type[Flask]):
     jwt.init_app(app)
 
 
-# def register_error_handlers(app: Type[Flask]):
-#     """Register custom error handlers."""
-
-#     from werkzeug.exceptions import NotFound, Unauthorized, MethodNotAllowed, Conflict
-#     from marshmallow import ValidationError
-#     from src.app.utils.exceptions import (
-#         handle_validation_error,
-#         handle_not_found_error,
-#         handle_unauthorized_error,
-#         handle_method_not_allowed_error,
-#         handle_conflict_error,
-#         global_exception_handler,
-#     )
-
-#     # Validation Errors
-#     app.register_error_handler(ValidationError, handle_validation_error)
-
-#     # HTTP Errors
-#     app.register_error_handler(NotFound, handle_not_found_error)
-#     app.register_error_handler(Unauthorized, handle_unauthorized_error)
-#     app.register_error_handler(MethodNotAllowed, handle_method_not_allowed_error)
-#     app.register_error_handler(Conflict, handle_conflict_error)
-
-#     # Catch-all for unhandled exceptions
-#     app.register_error_handler(Exception, global_exception_handler)
-
-
 def register_endpoints(api: Type[Api]):
     """Register API endpoints"""
 
