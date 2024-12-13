@@ -7,4 +7,4 @@ set -e
 flask db upgrade
 
 # Start the application
-gunicorn run:app
+gunicorn app:app
